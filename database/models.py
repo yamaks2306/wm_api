@@ -1,5 +1,5 @@
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Float
-from sqlalchemy.orm import relationship
+
 from .database import Base
 
 
@@ -21,7 +21,7 @@ class User(Base):
 class Weight(Base):
     __tablename__ = "weight"
 
-    id = Column(String, primary_key=True, index=True)
+    id = Column(Integer, primary_key=True, index=True)
     Timestamp = Column(Integer, nullable=False, index=True)
     user = Column(String, ForeignKey("users.id"))
     weight = Column(Float, nullable=False, index=True)
