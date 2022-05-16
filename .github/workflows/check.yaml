@@ -16,6 +16,4 @@ jobs:
         uses: mdegis/bandit-action@v1.0
         with: 
           path: "."
-          level: high
-          confidence: high
-          exit_zero: false
+
