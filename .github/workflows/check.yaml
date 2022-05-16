@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 0
 
       - name: Check code
-        uses: mdegis/bandit-action@v1
+        uses: mdegis/bandit-action@v1.0
         with: 
           path: "."
           level: high
