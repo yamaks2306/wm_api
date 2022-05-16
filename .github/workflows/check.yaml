@@ -1,0 +1,21 @@
+name: 'Code check'
+on:
+  workflow_dispatch:
+    
+jobs:
+  check:
+    name: check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Check code
+        uses: mdegis/bandit-action@v1
+        with: 
+          path: "."
+          level: high
+          confidence: high
+          exit_zero: false
